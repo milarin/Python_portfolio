@@ -1,0 +1,78 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ポートフォリオ</title>
+  <link rel="icon" type="image/icon" href="{% static '/image/logo2.png' %}">
+  <!-- CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
+  <link href="{% static 'style.css' %}" rel="stylesheet">
+  <script src='https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js'></script>
+  <link href="https://fonts.googleapis.com/css?family=Philosopher" rel="stylesheet">
+  
+</head>
+<body>
+
+  <header>
+    <div class="humberger-btn"><!-- ハンバーガーボタン -->
+        <span class="humberger-btn-bar top"></span>
+        <span class="humberger-btn-bar mid"></span>
+        <span class="humberger-btn-bar bot"></span>
+    </div><!-- .humberger-btn -->
+
+    <nav id="menu">
+      <ul>
+        <li><a href="/intro">自己紹介</a></li>
+        <li class="work-li"><a href="/list">作品(模写)</a>
+          <!-- <ul id="sub-menu">
+            <li><a href="copy1.html">模写作品1</a></li>
+            <li><a href="copy2.html">模写作品2</a></li>
+            <li><a href="copy3.html">模写作品3</a></li>
+            <li><a href="copy4.html">模写作品4</a></li>
+          </ul> -->
+        </li>
+        <li><a href="#">none</a></li>
+        <li><a href="#">none</a></li>
+      </ul>
+
+    </nav>
+  </header>
+
+  <div class="main-value">
+
+   <h1><a href="index.html"><img src="{% static 'image/logo2.png' %}" alt=""></a></h1>
+   
+   <div id="wrapper" class="flex">
+     <div id="left-container" class="main">
+       <div id="left-element">
+         <div id="left-text">
+           <p>{% block title %}{% endblock title %}</p>
+          </div><!-- #left-text -->
+        </div><!-- #left-element --->
+      </div><!-- #left-container .main -->
+    </div><!-- #wrapper .flex -->
+
+  </div><!-- .main-value -->
+
+  {% block content %}
+  {% endblock content %}
+
+  <div id="main-bg">
+    
+    <div id="emer">
+      <p class="textm emetex">
+        <span class="circle">!</span> お仕事を探しています
+      </p>
+      <p class="text">
+        ウェブ制作に興味があり経験を積みたいです。<br>
+        一生懸命勉強し得た知識を業務に生かし、
+        また自分なりに一生懸命勉強も継続していき業務へ活かします
+      </p>
+    </div><!-- #emer -->
+  </div><!-- #main-content -->
+
+  <script src="{% static 'index.js' %}"></script>
+</body>
+</html>

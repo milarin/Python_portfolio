@@ -1,0 +1,34 @@
+{% extends 'base.html' %}
+
+{% block title %}
+模写作品(詳細)
+{% endblock title %}
+
+
+{% block content %}
+
+<div id="main-content">
+
+  <div class="copy">
+    <p>{{ object.title }}</p>
+    <p>{{ object.time }}</p>
+    <p>{{ object.comment }}</p>
+    <p>{{ object.skill }}</p>
+    <p>参考サイト
+      <a href="{{ object.url }}" style="color: #337ab7;text-decoration: underline;" >{{ object.url }}</a>
+    </p>
+  
+    <a href="{{ object.img1.url }}" class="btn">模写作品を見る（画像）</a>
+    <a href="{{ object.img1.url }}"><img src="{{ object.img1.url }}" alt=""></a>
+  </div><!-- .copy -->
+
+  <div class="other">
+    <a href="/list" class="btn">
+      <p class="text otext">他の模写作品</p>
+    </a>
+  </div><!-- .other-->
+  
+</div><!-- #main-content -->
+
+
+{% endblock content %}
