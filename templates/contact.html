@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% load widget_tweaks %}
+
+{% block title %}
+お問い合わせ
+{% endblock title %}
+
+{% block content %}
+<div id="main-content">
+  <p class="contact-title">お問い合わせ</p>
+  <p class="contact-sub">お問い合わせフォームです。</p>
+  <form method="POST">{% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit" class="btn">送信</button>
+  </form>
+</div>
+{% endblock %}

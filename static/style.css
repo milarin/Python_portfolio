@@ -218,7 +218,55 @@ footer {
   line-height: 30px;
 }
 
+form p {
+  position: relative;
+  width: 90%;
+  margin: 40px 3% 0;
+}
+
+form .btn {
+  margin-top: 20px;
+  margin-left: 3%;
+  background: #8C031C;
+  color: #eee;
+  width: 80px;
+  height: 30px;
+}
+
+form .btn:hover {
+  background: #ff005d;
+}
+
+.form-control {
+  font: 15px/24px sans-serif;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  width: 100%;
+  padding: 0.3em;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  border: 1.5px solid #1b2538;
+  border-radius: 6px;
+  outline: none;
+}
+
+.form-control:focus {
+  border-color: #ff005d;
+}
+
+.contact-title {
+  font-size: 30px;
+}
+
+.contact-title,
+.contact-sub {
+  margin: 5px 3%;
+}
+
 @media (max-width: 989px) {
+  #main-content {
+    margin-bottom: 80px;
+  }
   #main-bg {
     padding: 0 4%;
   }
@@ -325,10 +373,9 @@ footer {
             transform: translateX(0%);
   }
   header {
-    background-image: url(../image/business-2846221_1920.jpg);
     background-repeat: no-repeat;
     background-size: cover;
-    height: 300px;
+    height: 140px;
   }
   h1 {
     position: absolute;
@@ -344,18 +391,24 @@ footer {
     opacity: 1;
   }
   #left-text {
-    position: absolute;
-    top: 200px;
-    left: 20px;
+    text-align: center;
+    font-size: 20px;
   }
   #left-text p {
-    color: #fff;
+    color: #333;
     font-family: "游明朝体", "Yu Mincho", YuMincho, "ヒラギノ明朝 ProN W6", "HiraMinProN-W6", "HG明朝B", "ＭＳ Ｐ明朝", "MS PMincho", "MS 明朝", serif;
     font-size: 150%;
     line-height: 140%;
   }
   .emetex {
     text-align: center;
+  }
+  .contact-title,
+  .contact-sub {
+    display: none;
+  }
+  form .btn {
+    width: 90%;
   }
 }
 
@@ -439,7 +492,6 @@ footer {
     height: 100%;
     top: 0;
     left: 0;
-    background-image: url(../image/business-2846221_1920.jpg);
     background-repeat: no-repeat;
     background-position: left center;
   }
